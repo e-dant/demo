@@ -20,7 +20,7 @@ auto rprint(const Path& base = ".") noexcept -> const void {
     std::cout << path.path() << std::endl;
 }
 
-// do not allow `exists` and `relpath` to be copy-constructed 
+// do not allow `exists` and `relpath` to be copy-constructed
 // because the arguments might allocate
 template <class Path>
 auto exists(const Path&& path, const Path&& base = ".") noexcept -> const bool {
@@ -34,10 +34,10 @@ auto exists(const Path&& path, const Path&& base = ".") noexcept -> const bool {
     return false;
 }
 
-// do not allow `exists` and `relpath` to be copy-constructed 
+// do not allow `exists` and `relpath` to be copy-constructed
 // because the arguments might allocate
 template <class Path>
-auto relpath(const Path&& path, const Path&& base = ".") noexcept -> const auto {
+auto relpath(const Path&& path, const Path&& base = ".") noexcept -> const auto{
   if (server::fs::exists(std::move(path))) {
     return base.generic_string() + path.generic_string();
   } else {
