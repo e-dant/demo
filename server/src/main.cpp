@@ -56,13 +56,12 @@ auto main(int argc, char* argv[]) -> int try {
   server::fs::rprint(".");
   info::soft("address:port(", po.address, ":", po.port, ")");
 
-  //// we use thread_count-1 because this thread will also be running.
-  //// (it's a segfault if the program exits while the io context is handling
-  //// threads)
-  // for (auto i = 0; i < (thread_count - 1); i++) {
-  //   thread_pool.insert(std::pair<int, std::thread>{i, [&ioc] { ioc.run();
-  //   }});
-  // }
+  // we use thread_count-1 because this thread will also be running.
+  // (it's a segfault if the program exits while the io context is handling
+  // threads)
+  for (auto i = 0; i < (thread_count - 1); i++) {
+    thread_pool.insert(std::pair<int, std::thread>{i, [&ioc] { ioc.run(); }});
+  }
 
   ioc.run();
 
