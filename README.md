@@ -11,11 +11,15 @@ module clean build
 
 ### run
 
-`./build/server <args>`
+```
+./build/server <args>
+```
 
 ### help
 
-`./build/server --help`
+```
+./build/server --help
+```
 
 ## argparse
 
@@ -28,5 +32,10 @@ C++ -std=c++20 argparse.cpp -o argparse
 
 ### run
 
-`./argparse <pass it some arguments>`
+```
+./argparse <pass it some arguments>
+```
 
+## notes
+
+Contains an archive of interesting code snippets.
