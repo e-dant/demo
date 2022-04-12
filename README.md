@@ -19,6 +19,10 @@ module clean build
 
 ```
 ./build/server --help
+server:
+  -h [ --help ]                   print this help message
+  -a [ --address ] arg (=0.0.0.0) set listening address
+  -p [ --port ] arg (=9080)       set listening port
 ```
 
 ## argparse
