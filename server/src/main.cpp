@@ -25,7 +25,7 @@
  * Firstly, this server would not be possible without boost.asio and
  * boost.beast.
  *
- * Morevover, Vinnie Falco's excellent examples and talks provided the listener,
+ * Moreover, Vinnie Falco's excellent examples and talks provided the listener,
  * response and session sections (where his apache2 licenses are maintained).
  *
  * Another excellent shout-out to @lefticus (github; host of cppcast) for
